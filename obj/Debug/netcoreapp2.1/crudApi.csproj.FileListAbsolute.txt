@@ -1,0 +1,14 @@
+/home/anas/Projects/crudApi/bin/Debug/netcoreapp2.1/crudApi.deps.json
+/home/anas/Projects/crudApi/bin/Debug/netcoreapp2.1/crudApi.runtimeconfig.json
+/home/anas/Projects/crudApi/bin/Debug/netcoreapp2.1/crudApi.runtimeconfig.dev.json
+/home/anas/Projects/crudApi/bin/Debug/netcoreapp2.1/crudApi.dll
+/home/anas/Projects/crudApi/bin/Debug/netcoreapp2.1/crudApi.pdb
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.csprojAssemblyReference.cache
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.csproj.CoreCompileInputs.cache
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.RazorAssemblyInfo.cache
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.RazorAssemblyInfo.cs
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.AssemblyInfoInputs.cache
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.AssemblyInfo.cs
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.RazorTargetAssemblyInfo.cache
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.dll
+/home/anas/Projects/crudApi/obj/Debug/netcoreapp2.1/crudApi.pdb
