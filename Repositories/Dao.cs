@@ -12,7 +12,7 @@ namespace crudApi.Repositories
     {
         IEnumerable<TEntity> GetUsers();
         TEntity GetUser(U id);
-   //     int AddUser(TEntity b);
+        int AddUser(TEntity b);
     //    int UpdateUser(U id,TEntity b);
      //   int DeleteUser(U id); 
     }
@@ -36,6 +36,12 @@ namespace crudApi.Repositories
             {
                 var user = ctx.User.Find(id);
                 return user;
+            }
+
+            public int AddUser(User user)
+            {
+                ctx.User.Add(user);
+                return ctx.SaveChanges();
             }
     }
 

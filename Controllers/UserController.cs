@@ -42,8 +42,11 @@ namespace crudApi.Controllers
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public ActionResult<User> Post(User user)
         {
+            var result = _userRepo.AddUser(user);
+            Console.WriteLine("result ===" + result);
+            return user;
         }
 
         // PUT api/values/5
