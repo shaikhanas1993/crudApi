@@ -57,8 +57,11 @@ namespace crudApi.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id)
         {
+                var result = _userRepo.DeleteUser(id);
+                Console.WriteLine("result ===" + result);
+                return NoContent();
         }
     }
 }

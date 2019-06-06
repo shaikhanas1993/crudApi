@@ -14,7 +14,7 @@ namespace crudApi.Repositories
         TEntity GetUser(U id);
         int AddUser(TEntity b);
     //    int UpdateUser(U id,TEntity b);
-     //   int DeleteUser(U id); 
+        int DeleteUser(U id); 
     }
 
     public class Dao : IDao<User, int>
@@ -41,6 +41,13 @@ namespace crudApi.Repositories
             public int AddUser(User user)
             {
                 ctx.User.Add(user);
+                return ctx.SaveChanges();
+            }
+
+            public int DeleteUser(int id)
+            {
+                var user = ctx.User.Find(id);
+                ctx.User.Remove(user);
                 return ctx.SaveChanges();
             }
     }
