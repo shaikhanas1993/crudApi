@@ -11,7 +11,7 @@ namespace crudApi.Repositories
    public interface IDao<TEntity,U> where TEntity : class
     {
         IEnumerable<TEntity> GetUsers();
-  //      TEntity GetUser(U id);
+        TEntity GetUser(U id);
    //     int AddUser(TEntity b);
     //    int UpdateUser(U id,TEntity b);
      //   int DeleteUser(U id); 
@@ -29,6 +29,13 @@ namespace crudApi.Repositories
             {
                         var users = ctx.User.ToList();
                         return users;
+            }
+
+
+            public User GetUser(int id)
+            {
+                var user = ctx.User.Find(id);
+                return user;
             }
     }
 

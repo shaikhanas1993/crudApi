@@ -34,9 +34,10 @@ namespace crudApi.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<User> Get(int id)
         {
-            return "value";
+            var user = _userRepo.GetUser(id);
+            return Ok(user);
         }
 
         // POST api/values
