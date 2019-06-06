@@ -13,7 +13,7 @@ namespace crudApi.Repositories
         IEnumerable<TEntity> GetUsers();
         TEntity GetUser(U id);
         int AddUser(TEntity b);
-    //    int UpdateUser(U id,TEntity b);
+        int UpdateUser(U id,TEntity b);
         int DeleteUser(U id); 
     }
 
@@ -49,6 +49,21 @@ namespace crudApi.Repositories
                 var user = ctx.User.Find(id);
                 ctx.User.Remove(user);
                 return ctx.SaveChanges();
+            }
+
+            public int UpdateUser(int id,User user)
+            {
+                
+                var entity = ctx.User.FirstOrDefault(item => item.Id == id);
+                if(entity != null)
+                {
+                        entity.Name = user.Name;
+                        entity.Address = user.Address;
+
+                    ctx.User.Update(entity);
+                    return ctx.SaveChanges();
+                }
+                return 0;
             }
     }
 

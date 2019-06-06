@@ -51,8 +51,11 @@ namespace crudApi.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, User user)
         {
+            var result = _userRepo.UpdateUser(id,user);
+             Console.WriteLine("result ===" + result);
+            return NoContent();
         }
 
         // DELETE api/values/5
