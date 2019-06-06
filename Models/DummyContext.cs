@@ -5,13 +5,8 @@ using Microsoft.Extensions.Configuration;
 
 namespace crudApi.Models
 {
-    public partial class DummyContext : DbContext
+    public  class DummyContext : DbContext
     {
-
-         public IConfiguration Configuration { get; }
-        public DummyContext()
-        {
-        }
 
         public DummyContext(DbContextOptions<DummyContext> options)
             : base(options)

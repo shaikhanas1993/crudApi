@@ -28,7 +28,7 @@ namespace crudApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DummyContext>(options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            services.AddDbContextPool<DummyContext>(options => options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
             services.AddTransient(typeof(IDao<User, int>), typeof(Dao));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
